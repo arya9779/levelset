@@ -443,22 +443,12 @@ section {
   line-height: 1.6;
   margin-bottom: 48px;
 }
-  font-size: 32px;
-  margin: 12px 0 24px;
-  color: var(--text-dark);
-}
 
-.panel-linkedin {
-  display: flex;
+.btn-modern {
+  display: inline-flex;
   align-items: center;
   gap: 12px;
-  text-decoration: none;
-  color: var(--text-dark);
-  font-family: var(--aspekta);
-  font-weight: 500;
-  font-size: 14px;
-}
-32px;
+  padding: 16px 32px;
   border: 1px solid #000;
   background: #fff;
   color: #000;
