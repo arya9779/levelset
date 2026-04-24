@@ -7,6 +7,7 @@ import arrowSvg from './assets/svgs/arrow.svg';
 import chevronSvg from './assets/svgs/chevron.svg';
 import linkedinSvg from './assets/svgs/linkedin.svg';
 import cornerSvg from './assets/svgs/corner.svg';
+import watermarkSvg from './assets/svgs/watermark.svg';
 
 import benefitPortfolio from './assets/svgs/benefit-portfolio.svg';
 import benefitPharma from './assets/svgs/benefit-pharma.svg';
@@ -41,7 +42,7 @@ const LogoSVG = ({ color = "black" }) => (
 );
 
 const WatermarkSVG = () => (
-  <div className="background-watermark"></div>
+  <div className="background-watermark" style={{ backgroundImage: `url(${watermarkSvg})` }}></div>
 );
 
 const BenefitIcon = ({ title }) => {
@@ -147,6 +148,7 @@ function App() {
 
   return (
     <div className="site-wrapper">
+      <WatermarkSVG />
       <div className="app-root">
       <header className={`main-header ${isScrolled ? 'scrolled' : ''}`}>
         <div className="header-top">
@@ -198,9 +200,7 @@ function App() {
 
         {/* Who We Are Section */}
         <section id="about">
-          <div className="about-bg-watermark">
-            <img src={heroBg} alt="" />
-          </div>
+          <div className="about-bg-watermark" style={{ backgroundImage: `url(${watermarkSvg})` }}></div>
           <div className="about-corners-grid">
             {Array.from({ length: 12 }).map((_, i) => (
               <div key={i} className="bg-corner"><CornerSymbolSVG /></div>
@@ -236,6 +236,7 @@ function App() {
 
         {/* Vision Section */}
         <section id="vision" className="dark-section">
+          <div className="dark-pattern" style={{ backgroundImage: `url(${watermarkSvg})` }}></div>
           <div className="container">
             <div className="vision-content">
                <div className="eyebrow-container cyan-text">
@@ -448,6 +449,7 @@ function App() {
 
         {/* News Section */}
         <section id="news" className="dark-section">
+          <div className="dark-pattern" style={{ backgroundImage: `url(${watermarkSvg})` }}></div>
           <div className="container">
              <div className="eyebrow-container">
                <CornerSymbolSVG />
@@ -475,6 +477,7 @@ function App() {
 
         {/* Footer Section */}
         <footer id="footer" className="dark-footer">
+          <div className="dark-pattern" style={{ backgroundImage: `url(${watermarkSvg})` }}></div>
           <div className="container">
             <div className="footer-innovation-grid">
               <div className="partnering-cta">
