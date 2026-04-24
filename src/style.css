@@ -246,6 +246,28 @@ p {
   margin-bottom: 24px;
 }
 
+/* Background Patterns */
+.section-pattern {
+  position: absolute;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.15;
+}
+
+.isotype-pattern {
+  width: 600px;
+  height: 600px;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%) translateX(-20%);
+}
+
+.approach-pattern {
+  left: auto;
+  right: 0;
+  transform: translateY(-50%) translateX(20%) scaleX(-1);
+}
+
 .eyebrow-text {
   font-size: 14px;
   font-weight: 600;
@@ -1200,6 +1222,24 @@ h2 {
   justify-content: space-between;
   padding-top: 60px;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
+  position: relative;
+}
+
+.footer-brand {
+  position: relative;
+  z-index: 1;
+}
+
+.footer-isotype-bg {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%) translateX(-30%);
+  width: 500px;
+  height: 500px;
+  opacity: 0.08;
+  z-index: -1;
+  pointer-events: none;
 }
 
 .footer-cols {

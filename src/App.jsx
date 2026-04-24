@@ -227,8 +227,8 @@ function App() {
         </section>
 
         <section id="about">
-          <div className="about-pattern-bg">
-            <img src={watermarkSvg} alt="" className="about-watermark-icon" />
+          <div className="section-pattern isotype-pattern">
+            <PipelineGraphicSVG />
           </div>
           
           <div className="container">
@@ -279,6 +279,9 @@ function App() {
 
         {/* Approach Section */}
         <section id="model" className="approach-section">
+          <div className="section-pattern isotype-pattern approach-pattern">
+            <PipelineGraphicSVG />
+          </div>
           <div className="container">
             <div className="approach-layout">
               <div className="approach-left">
@@ -586,6 +589,9 @@ function App() {
             </div>
             <div className="footer-bottom">
               <div className="footer-brand">
+                <div className="footer-isotype-bg">
+                   <PipelineGraphicSVG />
+                </div>
                 <LogoSVG color="white" />
               </div>
               <div className="footer-cols">
