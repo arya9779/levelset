@@ -30,7 +30,7 @@ import advisor3 from './assets/images/advisor-3.png';
 import advisor4 from './assets/images/advisor-4.png';
 import tempusLogo from './assets/images/tempus.png';
 import radyusLogo from './assets/images/radyus.png';
-import pipelineGraphic from './assets/images/pipeline-graphic.png';
+import pipelineGraphic from './assets/svgs/pipeline-graphic.svg';
 
 // EXACT SVGs FROM THE SCRIPT
 const LogoSVG = ({ color = "black" }) => (
@@ -440,7 +440,7 @@ function App() {
             </div>
             <div className="pipeline-list">
               <div className="pipeline-visual-container">
-                 <img src={pipelineGraphic} alt="Pipeline Graphic" />
+                 <PipelineGraphicSVG />
               </div>
               {[
                 { title: 'Immunology & Inflammation', desc: 'Novel immunomodulatory approaches with biomarker-driven strategies targeting chronic inflammatory diseases, including IBD and autoimmune disorders' },
