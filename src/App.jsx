@@ -267,10 +267,8 @@ function App() {
               </div>
               <h2 className="vision-text">
                 <span className="muted-text">We aim to set a </span>
-                <span className="bold-text">new standard for repeatable value creation <br /></span>
-                <span className="bold-text">in drug development,</span>
-                <span className="muted-text"> where science, capital and <br /></span>
-                <span className="muted-text">R&D execution are successfully centralized.</span>
+                <span className="bold-text">new standard for repeatable value creation in drug development,</span>
+                <span className="muted-text"> where science, capital and R&D execution are successfully centralized.</span>
               </h2>
             </div>
           </div>
