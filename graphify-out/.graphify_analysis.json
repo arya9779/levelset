@@ -1,0 +1,24 @@
+{
+  "communities": {
+    "0": [
+      "counter_setupcounter",
+      "src_counter_js"
+    ],
+    "1": [
+      "src_main_js"
+    ]
+  },
+  "cohesion": {
+    "0": 1.0,
+    "1": 1.0
+  },
+  "gods": [],
+  "surprises": [],
+  "questions": [
+    {
+      "type": "no_signal",
+      "question": null,
+      "why": "Not enough signal to generate questions. This usually means the corpus has no AMBIGUOUS edges, no bridge nodes, no INFERRED relationships, and all communities are tightly cohesive. Add more files or run with --mode deep to extract richer edges."
+    }
+  ]
+}

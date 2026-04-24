@@ -1,0 +1,257 @@
+import React from 'react';
+import { partners } from '../mock';
+
+export default function PartnersSection() {
+  return (
+    <section id="partners" className="ls-section">
+      <div className="ls-container">
+        <div className="ls-partners-grid">
+          <div>
+            <h2 className="ls-section-title" style={{ fontSize: 'clamp(28px, 3vw, 42px)' }}>Partners</h2>
+            <p className="ls-body" style={{ marginTop: 24 }}>
+              LevelSet Bio partners with best-in-class organizations across AI, translational science and global clinical development to build a repeatable, capital-efficient drug development engine.
+            </p>
+            <p className="ls-body" style={{ marginTop: 18 }}>
+              This ecosystem enables faster decision-making, smarter biomarker strategy and scalable portfolio execution.
+            </p>
+          </div>
+          <div>
+            {partners.map((p) => (
+              <div key={p.name} className="ls-partner-card">
+                <img src={p.logo} alt={p.name} />
+                <h4>{p.name}</h4>
+                <p>{p.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+import React from 'react';
+import { ArrowRight } from 'lucide-react';
+import { therapeuticAreas, pipelineImage1, pipelineImage2 } from '../mock';
+
+export default function PipelineSection() {
+  return (
+    <section id="pipeline" className="ls-section ls-section-soft">
+      <div className="ls-container">
+        <span className="ls-eyebrow">Pipeline</span>
+        <div className="ls-pipeline-header-grid" style={{ marginTop: 24 }}>
+          <div>
+            <img src={pipelineImage1} alt="Pipeline diagram" className="ls-pipeline-img" />
+          </div>
+          <div>
+            <img src={pipelineImage2} alt="Therapeutic areas" className="ls-pipeline-img" />
+          </div>
+        </div>
+
+        <div style={{ display: 'grid', gridTemplateColumns: '1.2fr 1fr', gap: 60, alignItems: 'center', marginTop: 20 }} className="ls-pipeline-cta">
+          <h3 style={{ fontSize: 'clamp(24px, 2.4vw, 32px)', fontWeight: 600, lineHeight: 1.2, letterSpacing: '-0.02em', margin: 0 }}>
+            Have an asset that fits our model?
+          </h3>
+          <div>
+            <p className="ls-body" style={{ marginBottom: 24 }}>
+              LevelSet Bio is actively growing its initial portfolio through in-licensing late preclinical to early clinical assets, advancing high-potential programs through disciplined development to value-creating inflection points.
+            </p>
+            <a href="mailto:info@levelset.bio" className="ls-btn">
+              Contact us to Learn More <ArrowRight size={16} />
+            </a>
+          </div>
+        </div>
+
+        <div className="ls-pipeline-area-grid">
+          {therapeuticAreas.map((a) => (
+            <div key={a.title} className="ls-area-card">
+              <h5>{a.title}</h5>
+              <p>{a.desc}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+import React from 'react';
+import { ArrowRight } from 'lucide-react';
+import { therapeuticAreas, pipelineImage1, pipelineImage2 } from '../mock';
+
+export default function PipelineSection() {
+  return (
+    <section id="pipeline" className="ls-section ls-section-soft">
+      <div className="ls-container">
+        <span className="ls-eyebrow">Pipeline</span>
+        <div className="ls-pipeline-header-grid" style={{ marginTop: 24 }}>
+          <div>
+            <img src={pipelineImage1} alt="Pipeline diagram" className="ls-pipeline-img" />
+          </div>
+          <div>
+            <img src={pipelineImage2} alt="Therapeutic areas" className="ls-pipeline-img" />
+          </div>
+        </div>
+
+        <div style={{ display: 'grid', gridTemplateColumns: '1.2fr 1fr', gap: 60, alignItems: 'center', marginTop: 20 }} className="ls-pipeline-cta">
+          <h3 style={{ fontSize: 'clamp(24px, 2.4vw, 32px)', fontWeight: 600, lineHeight: 1.2, letterSpacing: '-0.02em', margin: 0 }}>
+            Have an asset that fits our model?
+          </h3>
+          <div>
+            <p className="ls-body" style={{ marginBottom: 24 }}>
+              LevelSet Bio is actively growing its initial portfolio through in-licensing late preclinical to early clinical assets, advancing high-potential programs through disciplined development to value-creating inflection points.
+            </p>
+            <a href="mailto:info@levelset.bio" className="ls-btn">
+              Contact us to Learn More <ArrowRight size={16} />
+            </a>
+          </div>
+        </div>
+
+        <div className="ls-pipeline-area-grid">
+          {therapeuticAreas.map((a) => (
+            <div key={a.title} className="ls-area-card">
+              <h5>{a.title}</h5>
+              <p>{a.desc}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+import React from 'react';
+import { ArrowRight } from 'lucide-react';
+import { WatermarkMark, LogoMark } from './Icons';
+
+export function CTASection() {
+  return (
+    <section className="ls-cta">
+      <div className="ls-cta-decor" style={{ left: 40 }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 30 }}>
+          {Array.from({ length: 9 }).map((_, i) => (
+            <WatermarkMark key={i} size={70} opacity={0.3} />
+          ))}
+        </div>
+      </div>
+      <div className="ls-container">
+        <div className="ls-cta-grid">
+          <h2>Interested in partnering or out-licensing your drug assets?</h2>
+          <div>
+            <p>We are actively acquiring advanced preclinical-stage and early clinical assets across modalities, with strong translational rationale, clear differentiation and well-defined development paths.</p>
+            <a href="mailto:info@levelset.bio" className="ls-btn ls-btn-dark">
+              Contact us <ArrowRight size={16} />
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+export function Footer() {
+  return (
+    <footer className="ls-footer">
+      <div className="ls-container">
+        <div className="ls-footer-grid">
+          <div>
+            <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 18 }}>
+              <LogoMark size={24} color="#fff" />
+              <span className="ls-footer-logo">LevelSet Bio</span>
+            </div>
+            <p style={{ maxWidth: 320, fontSize: 14 }}>Building pharma-ready assets with disciplined execution.</p>
+          </div>
+          <div>
+            <h5>Address</h5>
+            <p>Biotech+ Hub at Pegasus Park</p>
+            <p>3000 Pegasus Park Drive</p>
+            <p>Dallas, TX 75247, US</p>
+          </div>
+          <div>
+            <h5>Contact</h5>
+            <a href="mailto:info@levelset.bio">info@levelset.bio</a>
+            <div style={{ marginTop: 18 }}>
+              <h5>Navigation</h5>
+              <a href="#about">About</a>
+              <a href="#team">Team</a>
+              <a href="#pipeline">Pipeline</a>
+            </div>
+          </div>
+        </div>
+        <div className="ls-copyright">
+          <span>© {new Date().getFullYear()} LevelSet Bio. All rights reserved.</span>
+          <span>Building pharma-ready assets, one milestone at a time.</span>
+        </div>
+      </div>
+    </footer>
+  );
+}
+import React, { useEffect } from 'react';
+import './App.css';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Navbar from './components/Navbar';
+import Hero from './components/Hero';
+import { AboutSection, VisionSection } from './components/AboutSections';
+import ApproachSection from './components/ApproachSection';
+import TeamSection from './components/TeamSection';
+import PartnersSection from './components/PartnersSection';
+import PipelineSection from './components/PipelineSection';
+import NewsSection from './components/NewsSection';
+import { CTASection, Footer } from './components/FooterSections';
+import { Toaster } from './components/ui/sonner';
+
+function HomePage() {
+  useEffect(() => {
+    // Inject Google Fonts
+    const id = 'ls-fonts';
+    if (!document.getElementById(id)) {
+      const link = document.createElement('link');
+      link.id = id;
+      link.rel = 'stylesheet';
+      link.href = 'https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500;600;700&display=swap';
+      document.head.appendChild(link);
+    }
+
+    // Scroll fade-in animation
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((e) => {
+          if (e.isIntersecting) e.target.classList.add('visible');
+        });
+      },
+      { threshold: 0.1 }
+    );
+    document.querySelectorAll('.ls-fade').forEach((el) => observer.observe(el));
+    return () => observer.disconnect();
+  }, []);
+
+  return (
+    <>
+      <Navbar />
+      <main>
+        <Hero />
+        <AboutSection />
+        <VisionSection />
+        <ApproachSection />
+        <TeamSection />
+        <PartnersSection />
+        <PipelineSection />
+        <NewsSection />
+        <CTASection />
+      </main>
+      <Footer />
+      <Toaster />
+    </>
+  );
+}
+
+function App() {
+  return (
+    <div className="App">
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+        </Routes>
+      </BrowserRouter>
+    </div>
+  );
+}
+
+export default App;

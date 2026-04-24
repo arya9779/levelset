@@ -1,0 +1,49 @@
+{
+  "directed": false,
+  "multigraph": false,
+  "graph": {},
+  "nodes": [
+    {
+      "label": "counter.js",
+      "file_type": "code",
+      "source_file": "src\\counter.js",
+      "source_location": "L1",
+      "id": "src_counter_js",
+      "community": 0,
+      "norm_label": "counter.js"
+    },
+    {
+      "label": "setupCounter()",
+      "file_type": "code",
+      "source_file": "src\\counter.js",
+      "source_location": "L1",
+      "id": "counter_setupcounter",
+      "community": 0,
+      "norm_label": "setupcounter()"
+    },
+    {
+      "label": "main.js",
+      "file_type": "code",
+      "source_file": "src\\main.js",
+      "source_location": "L1",
+      "id": "src_main_js",
+      "community": 1,
+      "norm_label": "main.js"
+    }
+  ],
+  "links": [
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\counter.js",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_src": "src_counter_js",
+      "_tgt": "counter_setupcounter",
+      "source": "src_counter_js",
+      "target": "counter_setupcounter",
+      "confidence_score": 1.0
+    }
+  ],
+  "hyperedges": []
+}
