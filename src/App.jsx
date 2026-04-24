@@ -185,9 +185,6 @@ function App() {
       <main>
         {/* Hero Section */}
         <section id="hero">
-          <div className="hero-pattern-bg">
-            <img src={watermarkSvg} alt="" className="hero-watermark" />
-          </div>
           <div className="container hero-grid">
             <div className="hero-left">
               <div className="eyebrow-container">
