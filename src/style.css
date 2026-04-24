@@ -427,10 +427,14 @@ section {
   line-height: 1.5;
 }
 
+#vision {
+  padding: 60px 0 0;
+}
+
 .vision-content {
   max-width: 1000px;
   margin: 0 auto;
-  padding: 40px 0;
+  padding: 20px 0 60px;
 }
 
 .vision-text {
