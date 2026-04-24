@@ -332,8 +332,7 @@ function App() {
                   </div>
                   <div className="member-meta">
                     <h3>Ami Patel Shah, JD</h3>
-                    <div className="divider-sm"></div>
-                    <p className="title">Managing Partner</p>
+                                        <p className="title">Managing Partner</p>
                     <div className="member-footer">
                       <span className="read-bio">Read Bio</span>
                       <a href={bios.ami.linkedin} target="_blank" rel="noopener noreferrer" className="linkedin-link" onClick={(e) => e.stopPropagation()}>
@@ -348,8 +347,7 @@ function App() {
                   </div>
                   <div className="member-meta">
                     <h3>Marta New, PhD, MBA</h3>
-                    <div className="divider-sm"></div>
-                    <p className="title">Founding Partner</p>
+                                        <p className="title">Founding Partner</p>
                     <div className="member-footer">
                       <span className="read-bio">Read Bio</span>
                       <a href={bios.marta.linkedin} target="_blank" rel="noopener noreferrer" className="linkedin-link" onClick={(e) => e.stopPropagation()}>
@@ -377,8 +375,7 @@ function App() {
                     </div>
                     <div className="advisor-meta">
                       <h4>{advisor.name}</h4>
-                      <div className="divider-sm"></div>
-                      <p>{advisor.title}</p>
+                                            <p>{advisor.title}</p>
                       <div className="member-footer">
                         <span className="read-bio">Read Bio</span>
                         <a href={bios[advisor.id].linkedin} target="_blank" rel="noopener noreferrer" className="linkedin-link" onClick={(e) => e.stopPropagation()}>
