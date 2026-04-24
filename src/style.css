@@ -443,12 +443,22 @@ section {
   line-height: 1.6;
   margin-bottom: 48px;
 }
+  font-size: 32px;
+  margin: 12px 0 24px;
+  color: var(--text-dark);
+}
 
-.btn-modern {
-  display: inline-flex;
+.panel-linkedin {
+  display: flex;
   align-items: center;
   gap: 12px;
-  padding: 16px 32px;
+  text-decoration: none;
+  color: var(--text-dark);
+  font-family: var(--aspekta);
+  font-weight: 500;
+  font-size: 14px;
+}
+32px;
   border: 1px solid #000;
   background: #fff;
   color: #000;
@@ -1198,40 +1208,42 @@ h2 {
   font-weight: 500;
 }
 
-/* Modal */
-.modal {
+/* Bio Side Panel */
+.bio-panel-overlay {
   position: fixed;
   inset: 0;
-  background: rgba(35, 31, 32, 0.9);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  background: rgba(0, 0, 0, 0.4);
   z-index: 2000;
-  padding: 40px;
-  animation: fadeIn 0.3s ease-out;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.4s ease;
+  backdrop-filter: blur(8px);
 }
 
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+.bio-panel-overlay.active {
+  opacity: 1;
+  visibility: visible;
 }
 
-.modal-content {
+.bio-panel {
+  position: fixed;
+  top: 0;
+  right: -600px;
+  width: 600px;
+  height: 100%;
   background: white;
-  max-width: 1000px;
-  width: 100%;
-  border-radius: 0;
-  position: relative;
-  overflow: hidden;
-  animation: slideUp 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: -20px 0 50px rgba(0,0,0,0.1);
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  padding: 80px 60px;
+  overflow-y: auto;
+  z-index: 2001;
 }
 
-@keyframes slideUp {
-  from { transform: translateY(30px); opacity: 0; }
-  to { transform: translateY(0); opacity: 1; }
+.bio-panel-overlay.active .bio-panel {
+  transform: translateX(-600px);
 }
 
-.modal-close {
+.panel-close {
   position: absolute;
   top: 30px;
   right: 30px;
@@ -1242,108 +1254,103 @@ h2 {
   display: flex;
   align-items: center;
   justify-content: center;
+  font-size: 24px;
+  color: var(--text-dark);
   cursor: pointer;
   z-index: 10;
   transition: all 0.3s ease;
-  color: var(--text-dark);
 }
 
-.modal-close:hover {
+.panel-close:hover {
   background: var(--text-dark);
   color: white;
 }
 
-.modal-grid {
-  display: grid;
-  grid-template-columns: 380px 1fr;
-  min-height: 500px;
+.panel-header {
+  margin-bottom: 60px;
 }
 
-.modal-left {
-  background: #F8F8F8;
-  padding: 60px 40px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  border-right: 1px solid var(--border-light);
-}
-
-.modal-photo {
-  width: 240px;
-  height: 240px;
+.panel-image {
+  width: 180px;
+  height: 180px;
   margin-bottom: 40px;
-  border-radius: 0;
-  overflow: hidden;
 }
 
-.modal-photo img {
+.panel-image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  border: 1px solid var(--border-light);
 }
 
-.btn-social {
+.panel-info h2 {
+  font-size: 42px;
+  line-height: 1.1;
+  margin-bottom: 16px;
+  color: var(--text-dark);
+  font-weight: 500;
+}
+
+.panel-linkedin {
   display: flex;
   align-items: center;
   gap: 12px;
-  padding: 14px 24px;
-  border: 1px solid var(--border-light);
+  text-decoration: none;
+  color: var(--text-dark);
+  font-family: var(--aspekta);
+  font-weight: 600;
+  font-size: 14px;
+  margin-top: 24px;
+}
+
+.panel-body {
+  border-top: 1px solid var(--border-light);
+  padding-top: 40px;
+}
+
+.panel-body p {
+  font-size: 17px !important;
+  line-height: 1.8 !important;
+  color: var(--text-muted) !important;
+  opacity: 1 !important;
+}
+
+/* LinkedIn Icon Hover */
+.linkedin-icon-wrap {
+  display: inline-flex;
+  align-items: center;
+}
+
+.linkedin-svg {
+  width: 22px;
+  height: 22px;
+  filter: grayscale(1);
+  opacity: 0.6;
+  transition: all 0.4s ease;
+}
+
+.linkedin-icon-wrap:hover .linkedin-svg,
+.panel-linkedin:hover .linkedin-svg,
+.team-card:hover .linkedin-svg {
+  filter: grayscale(0);
+  opacity: 1;
+}
+
+/* Team Card Bio Link */
+.read-bio {
   color: var(--text-dark);
   text-decoration: none;
-  font-family: var(--aspekta);
-  font-weight: 500;
-  font-size: 14px;
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  border-bottom: 1px solid transparent;
   transition: all 0.3s ease;
-  background: white;
+  cursor: pointer;
 }
 
-.btn-social:hover {
+.read-bio:hover {
   border-color: var(--primary);
-  color: var(--primary);
-}
-
-.modal-right {
-  padding: 80px 60px;
-  display: flex;
-  flex-direction: column;
-}
-
-.modal-header {
-  margin-bottom: 40px;
-}
-
-.modal-header h2 {
-  font-size: 36px;
-  margin-bottom: 12px;
-  line-height: 1.1;
-}
-
-.modal-title {
-  font-size: 18px;
-  color: var(--primary);
-  font-weight: 500;
-  letter-spacing: 0.02em;
-}
-
-.modal-body {
-  flex: 1;
-}
-
-.modal-text {
-  font-size: 17px;
-  line-height: 1.7;
-  color: var(--text-muted);
-  white-space: pre-wrap;
-}
-
-.linkedin-link {
-  display: flex;
-  align-items: center;
-  color: var(--text-dark);
-  transition: color 0.3s ease;
-}
-
-.linkedin-link:hover {
   color: var(--primary);
 }
 

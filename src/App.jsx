@@ -96,7 +96,7 @@ const bios = {
     name: "Ami Patel Shah, JD",
     title: "Managing Partner",
     image: amiPhoto,
-    linkedin: "#",
+    linkedin: "https://www.linkedin.com/in/ami-shah-429aa349/",
     text: "Ami Patel Shah is a Founder and Managing Partner at LevelSet Bio, leading Capital Structuring and Portfolio Governance across the platform. She is an expert in IP-driven investment strategy, portfolio valuation and innovative financing models for pharma assets. Prior to LevelSet Bio, Ami was a Managing Director at Fortress Investment Group, where she helped build the world's first dedicated IP investment fund, managing over $3 billion in assets. She later founded LevelSet Capital, focused on unlocking value from intellectual property originating in universities and R&D institutions. Her work at LevelSet Bio focuses on structuring capital-efficient portfolios and aligning financing strategies with long-term value creation and exit readiness."
   },
   marta: {
@@ -104,7 +104,7 @@ const bios = {
     name: "Marta New, PhD, MBA",
     title: "Founding Partner",
     image: martaPhoto,
-    linkedin: "#",
+    linkedin: "https://www.linkedin.com/in/martanew/",
     text: "Marta New is a Founding Partner at LevelSet Bio, leading Portfolio Strategy and R&D Oversight across the platform. With over 15 years of experience across venture capital, pharma, and biotech boards, including roles at Baxter Ventures and Agent Capital, Marta has consistently operated at the intersection of science, capital and execution. Prior to LevelSet Bio, Marta was the Founder and CEO of Radyus Research & Development, where she built a global drug development CRO and program management organization supporting biotech companies from preclinical development through clinical execution. At LevelSet Bio, she leads portfolio strategy and R&D operating execution to advance programs toward clinical value inflection and pharmaceutical partnerships."
   },
   advisor1: {
@@ -112,7 +112,7 @@ const bios = {
     name: "Alexandre LeBeaut, MD",
     title: "Scientific Advisor",
     image: advisor1,
-    linkedin: "#",
+    linkedin: "https://www.linkedin.com/in/alexandre-lebeaut-1400719/",
     text: "Alexandre LeBeaut, MD, serves as a Scientific Advisor to LevelSet Bio, bringing decades of global clinical development and regulatory leadership. His expertise is instrumental in de-risking clinical strategies and ensuring programs are designed for successful pharmaceutical integration and regulatory approval."
   },
   advisor2: {
@@ -120,7 +120,7 @@ const bios = {
     name: "Matt Tremblay, PhD",
     title: "Scientific Advisor",
     image: advisor2,
-    linkedin: "#",
+    linkedin: "https://www.linkedin.com/in/matt-tremblay-ph-d-5671594a/",
     text: "Matt Tremblay, PhD, provides strategic scientific guidance to the LevelSet Bio platform. With a deep background in translational science and drug discovery, he helps identify and validate high-potential assets that fit the LevelSet model of disciplined, data-driven execution."
   },
   advisor3: {
@@ -128,7 +128,7 @@ const bios = {
     name: "Dennis Liotta, PhD",
     title: "Scientific Advisor",
     image: advisor3,
-    linkedin: "#",
+    linkedin: "https://www.linkedin.com/in/dennis-liotta-1b087729/",
     text: "Dennis Liotta, PhD, is a world-renowned medicinal chemist and Scientific Advisor to LevelSet Bio. His vast experience in drug development and chemistry is vital in assessing the biological and chemical feasibility of assets entering the LevelSet portfolio."
   },
   advisor4: {
@@ -136,7 +136,7 @@ const bios = {
     name: "Jeni Fan",
     title: "Industry Advisor",
     image: advisor4,
-    linkedin: "#",
+    linkedin: "https://www.linkedin.com/in/jeni-fan/",
     text: "Jeni Fan serves as an Industry Advisor, bridging the gap between drug development execution and pharmaceutical partnering. Her insights into market dynamics and buyer requirements ensure that LevelSet programs are optimized for successful exit and integration."
   }
 };
@@ -591,26 +591,18 @@ function App() {
       </main>
       </div>
 
-      {modalData && (
-        <div className="modal" onClick={closeModal}>
-          <div className="modal-content" onClick={e => e.stopPropagation()}>
-            <button className="modal-close" onClick={closeModal}>
-               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
-            </button>
-            <div className="modal-grid">
-              <div className="modal-left">
-                <div className="modal-photo">
+      {/* Bio Side Panel */}
+      <div className={`bio-panel-overlay ${modalData ? 'active' : ''}`} onClick={closeModal}>
+        <div className={`bio-panel ${modalData ? 'active' : ''}`} onClick={e => e.stopPropagation()}>
+          <button className="panel-close" onClick={closeModal}>×</button>
+          {modalData && (
+            <div className="panel-content">
+              <div className="panel-header">
+                <div className="panel-image">
                   <img src={modalData.image} alt={modalData.name} />
                 </div>
-                <div className="modal-socials">
-                  <a href={modalData.linkedin} className="btn-social">
-                    <LinkedInSVG /> Connect on LinkedIn
-                  </a>
-                </div>
-              </div>
-              <div className="modal-right">
-                <div className="modal-header">
-                  <div className="eyebrow-container">
+                <div className="panel-info">
+                   <div className="eyebrow-container">
                     <CornerSymbolSVG />
                     <span className="eyebrow-text">TEAM BIO</span>
                   </div>
