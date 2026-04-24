@@ -210,39 +210,25 @@ function App() {
           </div>
         </section>
 
-        {/* Who We Are Section */}
         <section id="about">
           <div className="about-pattern-bg">
-            <div className="corner-grid-pattern">
-              {Array.from({ length: 24 }).map((_, i) => (
-                <div key={i} className="bg-corner-item"><CornerSymbolSVG /></div>
-              ))}
-            </div>
             <img src={watermarkSvg} alt="" className="about-watermark-icon" />
           </div>
           
           <div className="container">
-            <div className="about-layout">
-              <div className="about-left">
+            <div className="about-layout-v2">
+              <div className="about-content-left">
                 <div className="eyebrow-container">
                   <CornerSymbolSVG />
                   <span className="eyebrow-text">WHO WE ARE</span>
                 </div>
-                <h2>LevelSet Bio was founded to address one of the biggest failure points in biotech... execution</h2>
+                <h2>Building the Future of Drug Development</h2>
+                <p className="lead-text">Too many promising drug programs stall or fail for reasons that have little to do with biology and everything to do with fragmented development, misaligned capital and reactive decision-making.</p>
+                <p>Our mission is to build a capital-efficient drug development platform that systematically advances high-potential assets with institutional-grade execution. We design programs to withstand regulatory, operational and capital constraints from day one, so strong science is translated into credible, pharma-ready programs.</p>
               </div>
 
-              <div className="about-middle">
-                <div className="pillar-container">
-                  <img src={cellsPillar} alt="Cells Pillar" />
-                </div>
-              </div>
-
-              <div className="about-right">
-                <div className="about-text-box">
-                  <div className="divider-top"></div>
-                  <p>Too many promising drug programs stall or fail for reasons that have little to do with biology and everything to do with fragmented development, misaligned capital and reactive decision-making.</p>
-                  <p>Our mission is to build a capital-efficient drug development platform that systematically advances high-potential assets with institutional-grade execution. We design programs to withstand regulatory, operational and capital constraints from day one, so strong science is translated into credible, pharma-ready programs.</p>
-                </div>
+              <div className="about-image-right">
+                 <img src={cellsPillar} alt="Cells Pillar" />
               </div>
             </div>
           </div>
