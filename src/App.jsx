@@ -422,8 +422,10 @@ function App() {
 
         {/* Pipeline Section */}
         <section id="pipeline">
-          <div className="pipeline-bg-accent">
-             <CornerSymbolSVG />
+          <div className="corner-grid-pattern">
+             {Array.from({ length: 12 }).map((_, i) => (
+                <div key={i} className="bg-corner-item"><CornerSymbolSVG /></div>
+              ))}
           </div>
           <div className="container pipeline-layout">
             <div className="pipeline-sidebar">
@@ -433,7 +435,7 @@ function App() {
               </div>
               <h2>Have an asset that fits our model?</h2>
               <div className="full-divider"></div>
-              <p>LevelSet Bio is actively growing its initial portfolio through in-licensing late preclincal to early clinical assets, advancing high-potential programs through disciplined development to value-creating inflection points.</p>
+              <p>LevelSet Bio is actively growing its initial portfolio through in-licensing late preclinical to early clinical assets, advancing high-potential programs through disciplined development to value-creating inflection points.</p>
               <a href="mailto:info@levelsetbio.com" className="btn btn-outline">Contact us to Learn More <div className="arrow-wrap"><ArrowSVG /></div></a>
             </div>
             <div className="pipeline-list">
