@@ -523,6 +523,11 @@ section {
   color: rgba(255,255,255,0.4);
 }
 
+.vision-text .bold-text {
+  color: #ffffff;
+  font-weight: 500;
+}
+
 .eyebrow-text {
   font-family: var(--aspekta);
   font-size: 14px;
