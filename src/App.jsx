@@ -90,9 +90,11 @@ const LinkedInSVG = () => (
   <img src={linkedinSvg} alt="LinkedIn" className="linkedin-svg" />
 );
 
-const ChevronBarSVG = () => (
-  <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M4.5 3L7.5 6L4.5 9" stroke="#979797" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+const RepeatingArrowsSVG = () => (
+  <svg width="24" height="12" viewBox="0 0 24 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M4 2L8 6L4 10" stroke="#55BEC6" strokeOpacity="0.3" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+    <path d="M10 2L14 6L10 10" stroke="#55BEC6" strokeOpacity="0.6" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+    <path d="M16 2L20 6L16 10" stroke="#55BEC6" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
   </svg>
 );
 
@@ -216,9 +218,9 @@ function App() {
             </div>
             <div className="hero-floating-bar">
                <div className="bar-item">Milestone-Driven Capital</div>
-               <ChevronBarSVG />
+               <RepeatingArrowsSVG />
                <div className="bar-item">De-Risked Development</div>
-               <ChevronBarSVG />
+               <RepeatingArrowsSVG />
                <div className="bar-item">Pharma-Ready Programs</div>
             </div>
           </div>
