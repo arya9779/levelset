@@ -1335,15 +1335,17 @@ h2 {
 .linkedin-svg {
   width: 22px;
   height: 22px;
-  filter: grayscale(1);
-  opacity: 0.6;
-  transition: all 0.4s ease;
+  filter: grayscale(100%) brightness(1.5);
+  opacity: 0.5;
+  transition: all 0.3s ease-out;
 }
 
 .linkedin-icon-wrap:hover .linkedin-svg,
 .panel-linkedin:hover .linkedin-svg,
-.team-card:hover .linkedin-svg {
-  filter: grayscale(0);
+.team-card:hover .linkedin-svg,
+.member-card-v2:hover .linkedin-svg,
+.advisor-card-v2:hover .linkedin-svg {
+  filter: grayscale(0%) brightness(1);
   opacity: 1;
 }
 
