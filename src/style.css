@@ -348,30 +348,28 @@ p {
   display: block;
   object-fit: cover;
 }.hero-floating-bar {
-  background: #231F20; /* Shadow Grey */
+  background: #231F20;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 40px;
-  height: 80px;
-  padding: 0 60px;
+  gap: 32px;
+  height: 84px;
+  padding: 0 48px;
   position: absolute;
-  bottom: 60px;
+  bottom: 0;
   right: 0;
-  width: 80%;
-  max-width: 840px;
+  width: auto;
+  min-width: 820px;
   z-index: 5;
-  box-shadow: 0 20px 40px rgba(0,0,0,0.2);
   color: white;
   font-family: var(--aspekta);
   font-size: 14px;
   font-weight: 500;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.02em;
 }
 
 .bar-item {
   white-space: nowrap;
-  text-transform: uppercase;
 }
 .program-item {
   display: flex;
