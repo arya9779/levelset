@@ -451,7 +451,7 @@ p {
 
 /* Sections */
 section {
-  padding: 120px 0;
+  padding: 80px 0;
 }
 
 .dark-section {
@@ -485,13 +485,13 @@ section {
 
 .approach-section {
   background: #ffffff;
-  padding: 140px 0;
+  padding: 80px 0;
 }
 
 .approach-layout {
   display: grid;
   grid-template-columns: 380px 1fr;
-  gap: 100px;
+  gap: 60px;
 }
 
 .approach-left h2 {
@@ -567,13 +567,13 @@ section {
 }
 
 #vision {
-  padding: 60px 0 0;
+  padding: 40px 0 0;
 }
 
 .vision-content {
   max-width: 1000px;
   margin: 0 auto;
-  padding: 20px 0 60px;
+  padding: 0 0 40px;
 }
 
 .vision-text {
@@ -633,7 +633,7 @@ h2 {
 .about-layout-v2 {
   display: grid;
   grid-template-columns: 1fr 480px;
-  gap: 120px;
+  gap: 60px;
   align-items: center;
   position: relative;
   z-index: 2;
@@ -748,8 +748,8 @@ h2 {
 .team-layout {
   display: grid;
   grid-template-columns: 350px 1fr;
-  gap: 80px;
-  margin-bottom: 120px;
+  gap: 60px;
+  margin-bottom: 80px;
 }
 
 .team-sidebar h2 {
@@ -832,7 +832,7 @@ h2 {
 }
 
 .advisory-board-section {
-  margin-top: 120px;
+  margin-top: 80px;
 }
 
 .section-label {
@@ -898,7 +898,7 @@ h2 {
 .partners-layout-v2 {
   display: grid;
   grid-template-columns: 1fr 1.5fr;
-  gap: 120px;
+  gap: 60px;
 }
 
 .partners-cards-v2 {
@@ -974,9 +974,9 @@ h2 {
 .pipeline-main-grid {
   display: grid;
   grid-template-columns: 1fr 1.5fr;
-  gap: 100px;
+  gap: 60px;
   align-items: start;
-  margin-top: 60px;
+  margin-top: 40px;
 }
 
 .vision-image-wrap {
@@ -1142,8 +1142,8 @@ h2 {
 .footer-innovation-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 80px;
-  margin-bottom: 80px;
+  gap: 60px;
+  margin-bottom: 60px;
   align-items: start;
 }
 
