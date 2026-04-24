@@ -198,7 +198,7 @@ p {
 
 .main-header.scrolled {
   transform: translateY(-70px); 
-  border-bottom: 1px solid #000000;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .header-top {
@@ -214,8 +214,8 @@ p {
   display: flex;
   align-items: center;
   justify-content: center;
-  border-top: 1px solid #000000;
-  border-bottom: 1px solid #000000;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .nav-links {
