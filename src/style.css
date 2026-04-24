@@ -1,43 +1,31 @@
 @font-face {
   font-family: 'Aspekta';
-  src: url('https://framerusercontent.com/assets/VgCH1eTbmWmaie5Kf5dc4yDp8.woff2') format('woff2');
+  src: url('./assets/3 - Fonts/Aspekta/Aspekta-400.ttf') format('truetype');
   font-weight: 400;
 }
 
 @font-face {
   font-family: 'Aspekta';
-  src: url('https://framerusercontent.com/assets/2LkCgMpxZjFXeJIL0FE34Ema5I.woff2') format('woff2');
+  src: url('./assets/3 - Fonts/Aspekta/Aspekta-450.ttf') format('truetype');
   font-weight: 450;
 }
 
 @font-face {
   font-family: 'Aspekta';
-  src: url('https://framerusercontent.com/assets/Kjc35gQcx84ShC0DuGi3DXzqXY.woff2') format('woff2');
+  src: url('./assets/3 - Fonts/Aspekta/Aspekta-500.ttf') format('truetype');
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'Aspekta';
+  src: url('./assets/3 - Fonts/Aspekta/Aspekta-600.ttf') format('truetype');
   font-weight: 600;
 }
 
 @font-face {
   font-family: 'Aspekta';
-  src: url('https://framerusercontent.com/assets/1lknw2KI9ivc7GLme1aTF3eHCE.woff2') format('woff2');
+  src: url('./assets/3 - Fonts/Aspekta/Aspekta-700.ttf') format('truetype');
   font-weight: 700;
-}
-
-@font-face {
-  font-family: 'Aspekta';
-  src: url('https://framerusercontent.com/assets/fQhOxnahC9oaUqWnloVC1798.woff2') format('woff2');
-  font-weight: 900;
-}
-
-@font-face {
-  font-family: 'Metric';
-  src: url('https://framerusercontent.com/assets/VgCH1eTbmWmaie5Kf5dc4yDp8.woff2') format('woff2');
-  font-weight: 400;
-}
-
-@font-face {
-  font-family: 'Metric';
-  src: url('https://framerusercontent.com/assets/2LkCgMpxZjFXeJIL0FE34Ema5I.woff2') format('woff2');
-  font-weight: 500;
 }
 
 @font-face {
@@ -993,10 +981,10 @@ h2 {
 
 /* Footer */
 .dark-footer {
-  background: #ffffff;
-  color: var(--text-dark);
+  background: #000000;
+  color: white;
   padding: 120px 0 60px;
-  border-top: 1px solid var(--border-light);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .footer-innovation-grid {
@@ -1016,7 +1004,7 @@ h2 {
 
 .partnering-cta p {
   font-size: 18px;
-  color: var(--text-muted);
+  color: #979797;
   margin-bottom: 48px;
   max-width: 500px;
 }
@@ -1038,13 +1026,13 @@ h2 {
   font-size: 12px;
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  color: var(--text-muted);
+  color: #555;
 }
 
 .stat-value {
   font-size: 16px;
   font-weight: 500;
-  color: var(--text-dark);
+  color: white;
 }
 
 .stat-value.active {
@@ -1130,13 +1118,13 @@ h2 {
 }
 
 .footer-col p {
-  color: var(--text-muted);
+  color: #979797;
   font-size: 16px;
   line-height: 1.6;
 }
 
 .footer-col a {
-  color: var(--text-dark);
+  color: white;
   text-decoration: none;
   font-weight: 500;
 }

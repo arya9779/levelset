@@ -1,7 +1,8 @@
 import { useState, useEffect } from 'react';
 
 // Import local assets
-import logoSvg from './assets/svgs/logo.svg';
+import logoBlack from './assets/2 - Logo/Main logo/SVG/LevelSet Bio - Logo - Black.svg';
+import logoWhite from './assets/2 - Logo/Main logo/SVG/LevelSet Bio - Logo - White.svg';
 import arrowSvg from './assets/svgs/arrow.svg';
 import chevronSvg from './assets/svgs/chevron.svg';
 import linkedinSvg from './assets/svgs/linkedin.svg';
@@ -31,8 +32,12 @@ import radyusLogo from './assets/images/radyus.png';
 import pipelineGraphic from './assets/images/pipeline-graphic.png';
 
 // EXACT SVGs FROM THE SCRIPT
-const LogoSVG = ({ color = "rgb(35,31,32)" }) => (
-  <img src={logoSvg} alt="LevelSet Bio" style={{ width: '280px', filter: color === 'white' ? 'brightness(0) invert(1)' : 'none' }} />
+const LogoSVG = ({ color = "black" }) => (
+  <img 
+    src={color === 'white' ? logoWhite : logoBlack} 
+    alt="LevelSet Bio" 
+    style={{ width: '280px' }} 
+  />
 );
 
 const WatermarkSVG = () => (
@@ -525,7 +530,7 @@ function App() {
             </div>
             <div className="footer-bottom">
               <div className="footer-brand">
-                <LogoSVG color="black" />
+                <LogoSVG color="white" />
               </div>
               <div className="footer-cols">
                 <div className="footer-col">
