@@ -90,6 +90,12 @@ const LinkedInSVG = () => (
   <img src={linkedinSvg} alt="LinkedIn" className="linkedin-svg" />
 );
 
+const TriangleSVG = () => (
+  <svg width="20" height="10" viewBox="0 0 20 10" fill="#2F2F2F" style={{ position: 'absolute', bottom: '-10px', left: '50%', transform: 'translateX(-50%)' }}>
+    <path d="M10 10L0 0H20L10 10Z" />
+  </svg>
+);
+
 const bios = {
   ami: {
     id: 'ami',
@@ -212,6 +218,7 @@ function App() {
                <div className="bar-item">Milestone-Driven Capital <ChevronSVG /></div>
                <div className="bar-item">De-Risked Development <ChevronSVG /></div>
                <div className="bar-item">Pharma-Ready Programs</div>
+               <TriangleSVG />
             </div>
           </div>
         </section>
