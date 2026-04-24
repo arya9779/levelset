@@ -87,7 +87,7 @@ const ChevronSVG = () => (
 );
 
 const LinkedInSVG = () => (
-  <img src={linkedinSvg} alt="LinkedIn" style={{ width: '22px', height: '22px' }} />
+  <img src={linkedinSvg} alt="LinkedIn" className="linkedin-svg" />
 );
 
 const bios = {
