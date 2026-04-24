@@ -829,6 +829,25 @@ h2 {
   display: flex;
   flex-direction: column;
   border: 1px solid var(--border-light);
+  transition: all 0.3s ease;
+}
+
+.partner-box.dark {
+  background: var(--bg-dark);
+  color: white;
+  border: none;
+}
+
+.partner-box.dark h3 {
+  color: white;
+}
+
+.partner-box.dark p {
+  color: #979797;
+}
+
+.partner-box.dark .divider-light {
+  background: rgba(255, 255, 255, 0.1);
 }
 
 .partner-header {

@@ -376,7 +376,7 @@ function App() {
               <p>This ecosystem enables faster decision-making, smarter biomarker strategy and scalable portfolio execution.</p>
             </div>
             <div className="partners-cards-v2">
-              <div className="partner-box">
+              <div className="partner-box dark">
                 <div className="partner-header">
                    <img src={tempusLogo} alt="Tempus AI" style={{ height: '40px' }} />
                 </div>
@@ -387,7 +387,7 @@ function App() {
                   <p>Enables AI-driven insights across biomarker strategy, translational science and clinical development, supporting data-informed decision-making and pharma-ready evidence generation.</p>
                 </div>
               </div>
-              <div className="partner-box">
+              <div className="partner-box dark">
                 <div className="partner-header">
                    <img src={radyusLogo} alt="Radyus R&D" style={{ height: '32px' }} />
                 </div>
