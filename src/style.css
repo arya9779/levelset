@@ -327,8 +327,8 @@ section {
 }
 
 .dark-section {
-  background: #F7F7F7;
-  color: var(--text-dark);
+  background: #231F20;
+  color: white;
   padding-bottom: 0;
 }
 
@@ -438,15 +438,15 @@ section {
   line-height: 1.15;
   font-weight: 400;
   letter-spacing: -0.02em;
-  color: rgba(0,0,0,0.2);
+  color: rgba(255,255,255,0.4);
 }
 
 .vision-text .muted-text {
-  color: rgba(0,0,0,0.2);
+  color: rgba(255,255,255,0.4);
 }
 
 .vision-text .bold-text {
-  color: var(--text-dark);
+  color: #ffffff;
   font-weight: 500;
 }
 
@@ -937,10 +937,9 @@ h2 {
 }
 
 .news-card {
-  background: #ffffff;
+  background: #111;
   border-radius: 0;
   overflow: hidden;
-  border: 1px solid var(--border-light);
 }
 
 .news-card-image {
@@ -972,7 +971,7 @@ h2 {
   font-size: 20px;
   line-height: 1.4;
   margin-bottom: 32px;
-  color: var(--text-dark);
+  color: white;
 }
 
 .read-more {
