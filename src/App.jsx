@@ -397,9 +397,9 @@ function App() {
             </div>
             <div className="partners-cards-v2">
               <div className="partner-box dark">
-                <div className="partner-header">
-                   <img src={tempusLogo} alt="Tempus AI" style={{ height: '40px' }} />
-                </div>
+                 <div className="partner-header">
+                    <img src={tempusLogo} alt="Tempus AI" className="partner-logo tempus" />
+                 </div>
                 <div className="partner-content">
                   <div className="divider-light"></div>
                   <h3>Tempus AI</h3>
@@ -408,9 +408,9 @@ function App() {
                 </div>
               </div>
               <div className="partner-box dark">
-                <div className="partner-header">
-                   <img src={radyusLogo} alt="Radyus R&D" style={{ height: '32px' }} />
-                </div>
+                 <div className="partner-header">
+                    <img src={radyusLogo} alt="Radyus R&D" className="partner-logo radyus" />
+                 </div>
                 <div className="partner-content">
                   <div className="divider-light"></div>
                   <h3>Radyus Research & Development</h3>
