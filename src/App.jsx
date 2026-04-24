@@ -589,7 +589,6 @@ function App() {
           </div>
         </footer>
       </main>
-      </div>
 
       {/* Bio Side Panel */}
       <div className={`bio-panel-overlay ${modalData ? 'active' : ''}`} onClick={closeModal}>
@@ -609,14 +608,18 @@ function App() {
                   <h2>{modalData.name}</h2>
                   <p className="modal-title">{modalData.title}</p>
                 </div>
-                <div className="modal-body">
-                  <div className="modal-text">{modalData.text}</div>
-                </div>
+              </div>
+              <div className="panel-body">
+                <p>{modalData.text}</p>
+                <a href={modalData.linkedin} target="_blank" rel="noopener noreferrer" className="panel-linkedin">
+                  <LinkedInSVG />
+                  <span>Connect on LinkedIn</span>
+                </a>
               </div>
             </div>
-          </div>
+          )}
         </div>
-      )}
+      </div>
     </div>
   );
 }
