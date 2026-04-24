@@ -91,8 +91,8 @@ const LinkedInSVG = () => (
 );
 
 const TriangleSVG = () => (
-  <svg width="20" height="10" viewBox="0 0 20 10" fill="#2F2F2F" style={{ position: 'absolute', bottom: '-10px', left: '50%', transform: 'translateX(-50%)' }}>
-    <path d="M10 10L0 0H20L10 10Z" />
+  <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M10 5L0 10L0 0L10 5Z" fill="#55BEC6" />
   </svg>
 );
 
@@ -215,10 +215,11 @@ function App() {
               </div>
             </div>
             <div className="hero-floating-bar">
-               <div className="bar-item">Milestone-Driven Capital <ChevronSVG /></div>
-               <div className="bar-item">De-Risked Development <ChevronSVG /></div>
-               <div className="bar-item">Pharma-Ready Programs</div>
+               <div className="bar-item">Milestone-Driven Capital</div>
                <TriangleSVG />
+               <div className="bar-item">De-Risked Development</div>
+               <TriangleSVG />
+               <div className="bar-item">Pharma-Ready Programs</div>
             </div>
           </div>
         </section>
