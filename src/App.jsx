@@ -326,7 +326,9 @@ function App() {
                     <p className="title">Managing Partner</p>
                     <div className="member-footer">
                       <span className="read-bio">Read Bio</span>
-                      <a href="#" className="linkedin-link"><LinkedInSVG /></a>
+                      <a href={bios.ami.linkedin} target="_blank" rel="noopener noreferrer" className="linkedin-link" onClick={(e) => e.stopPropagation()}>
+                        <LinkedInSVG />
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -340,7 +342,9 @@ function App() {
                     <p className="title">Founding Partner</p>
                     <div className="member-footer">
                       <span className="read-bio">Read Bio</span>
-                      <a href="#" className="linkedin-link"><LinkedInSVG /></a>
+                      <a href={bios.marta.linkedin} target="_blank" rel="noopener noreferrer" className="linkedin-link" onClick={(e) => e.stopPropagation()}>
+                        <LinkedInSVG />
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -367,7 +371,9 @@ function App() {
                       <p>{advisor.title}</p>
                       <div className="member-footer">
                         <span className="read-bio">Read Bio</span>
-                        <a href="#" className="linkedin-link"><LinkedInSVG /></a>
+                        <a href={bios[advisor.id].linkedin} target="_blank" rel="noopener noreferrer" className="linkedin-link" onClick={(e) => e.stopPropagation()}>
+                          <LinkedInSVG />
+                        </a>
                       </div>
                     </div>
                   </div>
