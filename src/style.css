@@ -327,8 +327,8 @@ section {
 }
 
 .dark-section {
-  background: #231F20;
-  color: white;
+  background: #F7F7F7;
+  color: var(--text-dark);
   padding-bottom: 0;
 }
 
@@ -438,15 +438,15 @@ section {
   line-height: 1.15;
   font-weight: 400;
   letter-spacing: -0.02em;
-  color: rgba(255,255,255,0.4);
+  color: rgba(0,0,0,0.2);
 }
 
 .vision-text .muted-text {
-  color: rgba(255,255,255,0.4);
+  color: rgba(0,0,0,0.2);
 }
 
 .vision-text .bold-text {
-  color: #ffffff;
+  color: var(--text-dark);
   font-weight: 500;
 }
 
@@ -786,12 +786,13 @@ h2 {
 }
 
 .partner-box {
-  background: var(--bg-dark);
-  color: white;
+  background: #F8F8F8;
+  color: var(--text-dark);
   padding: 48px;
   border-radius: 0;
   display: flex;
   flex-direction: column;
+  border: 1px solid var(--border-light);
 }
 
 .partner-header {
@@ -815,7 +816,7 @@ h2 {
 .divider-light {
   width: 100%;
   height: 1px;
-  background: rgba(255, 255, 255, 0.1);
+  background: var(--border-light);
 }
 
 /* Pipeline */
@@ -881,9 +882,10 @@ h2 {
 }
 
 .news-card {
-  background: #111;
+  background: #ffffff;
   border-radius: 0;
   overflow: hidden;
+  border: 1px solid var(--border-light);
 }
 
 .news-card-image {
@@ -915,6 +917,7 @@ h2 {
   font-size: 20px;
   line-height: 1.4;
   margin-bottom: 32px;
+  color: var(--text-dark);
 }
 
 .read-more {
@@ -932,9 +935,10 @@ h2 {
 
 /* Footer */
 .dark-footer {
-  background: var(--bg-dark);
-  color: white;
+  background: #ffffff;
+  color: var(--text-dark);
   padding: 120px 0 60px;
+  border-top: 1px solid var(--border-light);
 }
 
 .footer-innovation-grid {
@@ -954,7 +958,7 @@ h2 {
 
 .partnering-cta p {
   font-size: 18px;
-  color: #979797;
+  color: var(--text-muted);
   margin-bottom: 48px;
   max-width: 500px;
 }
@@ -976,13 +980,13 @@ h2 {
   font-size: 12px;
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  color: #555;
+  color: var(--text-muted);
 }
 
 .stat-value {
   font-size: 16px;
   font-weight: 500;
-  color: white;
+  color: var(--text-dark);
 }
 
 .stat-value.active {
@@ -990,11 +994,12 @@ h2 {
 }
 
 .pharma-form {
-  background: #111;
+  background: #F8F8F8;
   padding: 48px;
   display: flex;
   flex-direction: column;
   gap: 24px;
+  border: 1px solid var(--border-light);
 }
 
 .form-row {
@@ -1019,10 +1024,10 @@ h2 {
 .pharma-form input, 
 .pharma-form select, 
 .pharma-form textarea {
-  background: transparent;
-  border: 0.5px solid #333;
+  background: white;
+  border: 1px solid var(--border-light);
   padding: 14px;
-  color: white;
+  color: var(--text-dark);
   font-family: var(--aspekta) !important;
   font-size: 15px;
   transition: border-color 0.3s ease;
@@ -1067,14 +1072,15 @@ h2 {
 }
 
 .footer-col p {
-  color: #979797;
+  color: var(--text-muted);
   font-size: 16px;
   line-height: 1.6;
 }
 
 .footer-col a {
-  color: white;
+  color: var(--text-dark);
   text-decoration: none;
+  font-weight: 500;
 }
 
 /* Modal */
@@ -1123,6 +1129,17 @@ h2 {
   font-size: 18px;
   line-height: 1.6;
   color: var(--text-muted);
+}
+
+.linkedin-link {
+  display: flex;
+  align-items: center;
+  color: var(--text-dark);
+  transition: color 0.3s ease;
+}
+
+.linkedin-link:hover {
+  color: var(--primary);
 }
 
 /* Responsive */

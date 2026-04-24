@@ -270,7 +270,7 @@ function App() {
                     <p className="title">Managing Partner</p>
                     <div className="member-footer">
                       <span className="read-bio">Read Bio</span>
-                      <LinkedInSVG />
+                      <a href="#" className="linkedin-link"><LinkedInSVG /></a>
                     </div>
                   </div>
                 </div>
@@ -284,7 +284,7 @@ function App() {
                     <p className="title">Founding Partner</p>
                     <div className="member-footer">
                       <span className="read-bio">Read Bio</span>
-                      <LinkedInSVG />
+                      <a href="#" className="linkedin-link"><LinkedInSVG /></a>
                     </div>
                   </div>
                 </div>
@@ -311,7 +311,7 @@ function App() {
                       <p>{advisor.title}</p>
                       <div className="member-footer">
                         <span className="read-bio">Read Bio</span>
-                        <LinkedInSVG />
+                        <a href="#" className="linkedin-link"><LinkedInSVG /></a>
                       </div>
                     </div>
                   </div>
@@ -338,7 +338,7 @@ function App() {
               <p>This ecosystem enables faster decision-making, smarter biomarker strategy and scalable portfolio execution.</p>
             </div>
             <div className="partners-cards-v2">
-              <div className="partner-box dark">
+              <div className="partner-box">
                 <div className="partner-header">
                    <img src={tempusLogo} alt="Tempus AI" style={{ height: '40px' }} />
                 </div>
@@ -349,7 +349,7 @@ function App() {
                   <p>Enables AI-driven insights across biomarker strategy, translational science and clinical development, supporting data-informed decision-making and pharma-ready evidence generation.</p>
                 </div>
               </div>
-              <div className="partner-box dark">
+              <div className="partner-box">
                 <div className="partner-header">
                    <img src={radyusLogo} alt="Radyus R&D" style={{ height: '32px' }} />
                 </div>
@@ -413,8 +413,7 @@ function App() {
             <div className="news-grid">
               {[
                 { date: 'LevelSet Bio Launches Integrated Drug Development Platform', title: 'Platform debuts with founding partners and initial strategic collaborations.', img: news1 },
-                { date: 'LevelSet Bio Adds Industry Leaders to Advisory Boards', title: 'LevelSet Bio Adds Industry Leaders to Advisory Boards', img: news2 },
-                { date: 'Test', title: 'test', img: news3 }
+                { date: 'LevelSet Bio Adds Industry Leaders to Advisory Boards', title: 'LevelSet Bio Adds Industry Leaders to Advisory Boards', img: news2 }
               ].map(news => (
                 <div className="news-card" key={news.date}>
                   <div className="news-card-image">
@@ -488,7 +487,7 @@ function App() {
             </div>
             <div className="footer-bottom">
               <div className="footer-brand">
-                <LogoSVG color="white" />
+                <LogoSVG color="black" />
               </div>
               <div className="footer-cols">
                 <div className="footer-col">
