@@ -5,7 +5,7 @@ import logoBlack from './assets/2 - Logo/Main logo/SVG/LevelSet Bio - Logo - Bla
 import logoWhite from './assets/2 - Logo/Main logo/SVG/LevelSet Bio - Logo - White.svg';
 import arrowSvg from './assets/svgs/arrow.svg';
 import chevronSvg from './assets/svgs/chevron.svg';
-import linkedinSvg from './assets/svgs/linkedin.svg';
+import linkedinSvg from './assets/svgs/linkedin-official.svg';
 import cornerSvg from './assets/svgs/corner.svg';
 import watermarkSvg from './assets/svgs/watermark.svg';
 
@@ -83,7 +83,7 @@ const ChevronSVG = () => (
 );
 
 const LinkedInSVG = () => (
-  <img src={linkedinSvg} alt="LinkedIn" style={{ width: '18px', height: '18px' }} />
+  <img src={linkedinSvg} alt="LinkedIn" style={{ width: '22px', height: '22px' }} />
 );
 
 const bios = {
