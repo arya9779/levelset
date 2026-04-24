@@ -298,7 +298,7 @@ p {
 
 /* Hero */
 #hero {
-  padding: 140px 0 0;
+  padding: 80px 0 0;
   min-height: auto;
   position: relative;
 }
@@ -338,7 +338,7 @@ p {
   border-radius: 0;
   overflow: hidden;
   height: 480px; /* Adjusted to match text block height approx */
-  margin-top: 80px; /* Shifted upwards */
+  margin-top: 40px; /* Shifted upwards */
 }
 
 .hero-image-container img {
@@ -355,10 +355,10 @@ p {
   height: 80px;
   padding: 24px 40px;
   position: absolute;
-  bottom: 40px;
+  bottom: 20px;
   right: 80px;
   width: 840px;
-  z-index: 1000;
+  z-index: 1001;
   box-shadow: 0 20px 40px rgba(0,0,0,0.1);
   color: white;
 }
