@@ -195,7 +195,7 @@ function App() {
             <div className="hero-left">
               <div className="eyebrow-container">
                  <CornerSymbolSVG /> 
-                 <span className="eyebrow-text">LEVELSET BIO</span>
+                 <span className="eyebrow-text">Scaling High Potential Science</span>
               </div>
               <h1>Building Pharma-Ready Assets with Disciplined Execution</h1>
               <p>LevelSet Bio is an integrated drug development company designed to turn high-potential science into de-risked, pharma-ready programs through repeatable, portfolio-scale execution.</p>
