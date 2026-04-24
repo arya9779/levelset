@@ -197,8 +197,8 @@ p {
 }
 
 .main-header.scrolled {
-  transform: translateY(-70px); /* Hide top part */
-  border-bottom: 1px solid var(--border-light);
+  transform: translateY(-70px); 
+  border-bottom: 1px solid #000000;
 }
 
 .header-top {
@@ -214,8 +214,8 @@ p {
   display: flex;
   align-items: center;
   justify-content: center;
-  border-top: 1px solid var(--border-light);
-  border-bottom: 1px solid var(--border-light);
+  border-top: 1px solid #000000;
+  border-bottom: 1px solid #000000;
 }
 
 .nav-links {
@@ -226,7 +226,7 @@ p {
 
 .nav-links a {
   text-decoration: none;
-  color: var(--text-muted);
+  color: #000000;
   font-family: var(--aspekta);
   font-weight: 500;
   font-size: 15px;
@@ -523,10 +523,9 @@ section {
 }
 
 .vision-text {
-  font-size: 44px;
+  font-size: 40px;
   line-height: 1.15;
   font-weight: 400;
-  letter-spacing: -0.02em;
   color: rgba(255,255,255,0.4);
 }
 
