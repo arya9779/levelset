@@ -30,7 +30,11 @@ import advisor3 from './assets/images/advisor-3.png';
 import advisor4 from './assets/images/advisor-4.png';
 import tempusLogo from './assets/images/tempus.png';
 import radyusLogo from './assets/images/radyus.png';
-import pipelineGraphic from './assets/svgs/pipeline-graphic.svg';
+import pipeImmunology from './assets/images/pipeline/immunology.png';
+import pipeOncology from './assets/images/pipeline/oncology.png';
+import pipeNeuro from './assets/images/pipeline/neuro.png';
+import pipeMetabolic from './assets/images/pipeline/metabolic.png';
+import pipeUnderserved from './assets/images/pipeline/underserved.png';
 
 // EXACT SVGs FROM THE SCRIPT
 const LogoSVG = ({ color = "black" }) => (
@@ -148,6 +152,8 @@ function App() {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  const [hoveredPipeImage, setHoveredPipeImage] = useState(pipeImmunology);
 
   const openModal = (id) => {
     setModalData(bios[id]);
@@ -423,36 +429,52 @@ function App() {
                 <div key={i} className="bg-corner-item"><CornerSymbolSVG /></div>
               ))}
           </div>
-          <div className="container pipeline-layout">
-            <div className="pipeline-sidebar">
-               <div className="eyebrow-container">
-                 <CornerSymbolSVG />
-                 <span className="eyebrow-text">PIPELINE</span>
-              </div>
-              <h2>Have an asset that fits our model?</h2>
-              <div className="full-divider"></div>
-              <p>LevelSet Bio is actively growing its initial portfolio through in-licensing late preclinical to early clinical assets, advancing high-potential programs through disciplined development to value-creating inflection points.</p>
-              <a href="mailto:info@levelsetbio.com" className="btn btn-outline">Contact us to Learn More <div className="arrow-wrap"><ArrowSVG /></div></a>
+          <div className="container">
+            <div className="eyebrow-container">
+               <CornerSymbolSVG />
+               <span className="eyebrow-text">PIPELINE</span>
             </div>
-            <div className="pipeline-list">
-              <div className="pipeline-visual-container">
-                 <PipelineGraphicSVG />
-              </div>
-              {[
-                { title: 'Immunology & Inflammation', desc: 'Novel immunomodulatory approaches with biomarker-driven strategies targeting chronic inflammatory diseases, including IBD and autoimmune disorders' },
-                { title: 'Oncology', desc: 'Precision oncology assets with strong biological rationale, biomarker-defined populations, and clear differentiation in solid and hematologic tumors' },
-                { title: 'Neurodegenerative', desc: 'Programs addressing high-unmet-need neurological diseases, incorporating translational biomarkers to enable patient stratification and development decisions' },
-                { title: 'Metabolic/ Obesity', desc: 'Next-generation metabolic therapies with emerging biomarker strategies to improve patient selection, efficacy, and long-term outcomes' },
-                { title: 'Underserved Disease Areas', desc: 'High-impact programs in rare and underserved diseases with defined biomarkers and clear paths to differentiation and accelerated development' }
-              ].map(item => (
-                <div className="pipeline-item" key={item.title}>
-                  <div className="pipeline-item-content">
-                    <h4>{item.title}</h4>
-                    <p>{item.desc}</p>
-                  </div>
-                  <ArrowSVG color="#55BEC6" />
+            <h2>Pipeline</h2>
+            
+            <div className="pipeline-main-grid">
+              <div className="pipeline-visual-col">
+                <div className="pipeline-image-frame">
+                   <img 
+                      key={hoveredPipeImage} 
+                      src={hoveredPipeImage} 
+                      alt="Pipeline" 
+                      className="fade-in"
+                   />
                 </div>
-              ))}
+                <div className="pipeline-mission-wrap">
+                  <h3>Have an asset that fits our model?</h3>
+                  <div className="full-divider"></div>
+                  <p>LevelSet Bio is actively growing its initial portfolio through in-licensing late preclinical to early clinical assets, advancing high-potential programs through disciplined development to value-creating inflection points.</p>
+                  <a href="mailto:info@levelsetbio.com" className="btn btn-outline">Contact us to Learn More <div className="arrow-wrap"><ArrowSVG /></div></a>
+                </div>
+              </div>
+
+              <div className="pipeline-list-col">
+                {[
+                  { title: 'Immunology & Inflammation', img: pipeImmunology, desc: 'Novel immunomodulatory approaches with biomarker-driven strategies targeting chronic inflammatory diseases, including IBD and autoimmune disorders' },
+                  { title: 'Oncology', img: pipeOncology, desc: 'Precision oncology assets with strong biological rationale, biomarker-defined populations, and clear differentiation in solid and hematologic tumors' },
+                  { title: 'Neurodegenerative', img: pipeNeuro, desc: 'Programs addressing high-unmet-need neurological diseases, incorporating translational biomarkers to enable patient stratification and development decisions' },
+                  { title: 'Metabolic/ Obesity', img: pipeMetabolic, desc: 'Next-generation metabolic therapies with emerging biomarker strategies to improve patient selection, efficacy, and long-term outcomes' },
+                  { title: 'Underserved Disease Areas', img: pipeUnderserved, desc: 'High-impact programs in rare and underserved diseases with defined biomarkers and clear paths to differentiation and accelerated development' }
+                ].map(item => (
+                  <div 
+                    className="pipeline-item" 
+                    key={item.title}
+                    onMouseEnter={() => setHoveredPipeImage(item.img)}
+                  >
+                    <div className="pipeline-item-content">
+                      <h4>{item.title}</h4>
+                      <p>{item.desc}</p>
+                    </div>
+                    <ArrowSVG color="#55BEC6" />
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </section>
