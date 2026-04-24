@@ -75,34 +75,92 @@ html, body {
 }
 
 .background-watermark {
-  position: fixed;
-  inset: 0;
+  display: none;
+}
+
+.hero-pattern-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   z-index: 0;
   pointer-events: none;
-  opacity: 0.015; /* Extremely subtle */
-  background-repeat: repeat;
-  background-size: 400px;
+}
+
+.hero-watermark {
+  width: 1200px;
+  opacity: 0.03;
   filter: grayscale(1);
 }
 
-.partners-bg-accent, .pipeline-bg-accent {
+.about-pattern-bg {
   position: absolute;
+  inset: 0;
   z-index: 0;
   pointer-events: none;
-  opacity: 0.4; /* Increased from 0.02 */
-  width: 100px;
-  height: 100px;
-  color: var(--text-dark);
+  overflow: hidden;
 }
 
-.partners-bg-accent svg, .pipeline-bg-accent svg {
-  width: 100%;
-  height: 100%;
+.about-watermark-icon {
+  position: absolute;
+  bottom: -100px;
+  left: -100px;
+  width: 600px;
+  opacity: 0.04;
+  filter: grayscale(1);
 }
 
-.partners-bg-accent svg path, .pipeline-bg-accent svg path {
-  fill: currentColor !important;
+.corner-grid-pattern {
+  position: absolute;
+  top: 60px;
+  left: 48px;
+  display: grid;
+  grid-template-columns: repeat(6, 120px);
+  gap: 80px;
+  z-index: 1;
 }
+
+.bg-corner-item {
+  opacity: 0.06;
+}
+
+.white-corners .bg-corner-item {
+  opacity: 0.1;
+  filter: brightness(0) invert(1);
+}
+
+.dark-pattern-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.footer-pattern-bg {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.footer-watermark {
+  width: 1000px;
+  opacity: 0.04;
+  transform: rotate(-10deg);
+}
+
+.partners-bg-accent, .pipeline-bg-accent {
+  display: none; /* Replaced by grid patterns */
+}
+
+
 
 .partners-bg-accent {
   top: 50px;
@@ -486,35 +544,10 @@ h2 {
   overflow: hidden;
 }
 
-.about-bg-watermark {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0.02;
-  z-index: 0;
-  pointer-events: none;
-  background-repeat: repeat;
-  background-size: 400px;
-}
-
 .about-bg-watermark img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-}
-
-.about-corners-grid {
-  position: absolute;
-  top: 120px;
-  left: 48px;
-  display: grid;
-  grid-template-columns: repeat(4, 80px);
-  gap: 60px;
-  opacity: 0.1;
-  z-index: 1;
-  pointer-events: none;
 }
 
 .about-layout {

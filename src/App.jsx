@@ -148,7 +148,6 @@ function App() {
 
   return (
     <div className="site-wrapper">
-      <WatermarkSVG />
       <div className="app-root">
       <header className={`main-header ${isScrolled ? 'scrolled' : ''}`}>
         <div className="header-top">
@@ -173,6 +172,9 @@ function App() {
       <main>
         {/* Hero Section */}
         <section id="hero">
+          <div className="hero-pattern-bg">
+            <img src={watermarkSvg} alt="" className="hero-watermark" />
+          </div>
           <div className="container hero-grid">
             <div className="hero-left">
               <div className="eyebrow-container">
@@ -200,11 +202,13 @@ function App() {
 
         {/* Who We Are Section */}
         <section id="about">
-          <div className="about-bg-watermark" style={{ backgroundImage: `url(${watermarkSvg})` }}></div>
-          <div className="about-corners-grid">
-            {Array.from({ length: 12 }).map((_, i) => (
-              <div key={i} className="bg-corner"><CornerSymbolSVG /></div>
-            ))}
+          <div className="about-pattern-bg">
+            <div className="corner-grid-pattern">
+              {Array.from({ length: 24 }).map((_, i) => (
+                <div key={i} className="bg-corner-item"><CornerSymbolSVG /></div>
+              ))}
+            </div>
+            <img src={watermarkSvg} alt="" className="about-watermark-icon" />
           </div>
           
           <div className="container">
@@ -236,7 +240,13 @@ function App() {
 
         {/* Vision Section */}
         <section id="vision" className="dark-section">
-          <div className="dark-pattern" style={{ backgroundImage: `url(${watermarkSvg})` }}></div>
+          <div className="dark-pattern-overlay">
+            <div className="corner-grid-pattern white-corners">
+              {Array.from({ length: 12 }).map((_, i) => (
+                <div key={i} className="bg-corner-item"><CornerSymbolSVG /></div>
+              ))}
+            </div>
+          </div>
           <div className="container">
             <div className="vision-content">
                <div className="eyebrow-container cyan-text">
@@ -367,8 +377,10 @@ function App() {
 
         {/* Partners Section */}
         <section id="partners">
-          <div className="partners-bg-accent">
-            <CornerSymbolSVG />
+          <div className="corner-grid-pattern">
+             {Array.from({ length: 12 }).map((_, i) => (
+                <div key={i} className="bg-corner-item"><CornerSymbolSVG /></div>
+              ))}
           </div>
           <div className="container partners-layout-v2">
             <div className="partners-sidebar">
@@ -449,7 +461,13 @@ function App() {
 
         {/* News Section */}
         <section id="news" className="dark-section">
-          <div className="dark-pattern" style={{ backgroundImage: `url(${watermarkSvg})` }}></div>
+           <div className="dark-pattern-overlay">
+            <div className="corner-grid-pattern white-corners">
+              {Array.from({ length: 12 }).map((_, i) => (
+                <div key={i} className="bg-corner-item"><CornerSymbolSVG /></div>
+              ))}
+            </div>
+          </div>
           <div className="container">
              <div className="eyebrow-container">
                <CornerSymbolSVG />
@@ -477,7 +495,9 @@ function App() {
 
         {/* Footer Section */}
         <footer id="footer" className="dark-footer">
-          <div className="dark-pattern" style={{ backgroundImage: `url(${watermarkSvg})` }}></div>
+          <div className="footer-pattern-bg">
+             <img src={logoWhite} alt="" className="footer-watermark" />
+          </div>
           <div className="container">
             <div className="footer-innovation-grid">
               <div className="partnering-cta">
