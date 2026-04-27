@@ -275,6 +275,20 @@ p {
   letter-spacing: 0.1em;
 }
 
+.footer-pattern-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.footer-pattern-bg .corner-grid-pattern {
+  top: 40px;
+  left: 40px;
+  opacity: 0.4;
+}
+
 /* Buttons */
 .btn {
   display: inline-flex;

@@ -531,6 +531,13 @@ function App() {
 
         {/* Footer Section */}
         <footer id="footer" className="dark-footer">
+          <div className="footer-pattern-bg">
+            <div className="corner-grid-pattern white-corners">
+              {Array.from({ length: 12 }).map((_, i) => (
+                <div key={i} className="bg-corner-item"><CornerSymbolSVG /></div>
+              ))}
+            </div>
+          </div>
           <div className="container">
             <div className="footer-innovation-grid">
               <div className="partnering-cta">
