@@ -35,6 +35,7 @@ import pipeOncology from './assets/images/pipeline/oncology.png';
 import pipeNeuro from './assets/images/pipeline/neuro.png';
 import pipeMetabolic from './assets/images/pipeline/metabolic.png';
 import pipeUnderserved from './assets/images/pipeline/underserved.png';
+import pipelineGraphicPng from './assets/images/pipeline-graphic.png';
 
 // EXACT SVGs FROM THE SCRIPT
 const LogoSVG = ({ color = "black" }) => (
@@ -62,7 +63,7 @@ const BenefitIcon = ({ title }) => {
 };
 
 const CornerSymbolSVG = () => (
-  <svg width="7" height="7" viewBox="0 0 7 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <svg width="12" height="12" viewBox="0 0 7 7" fill="none" xmlns="http://www.w3.org/2000/svg">
     <path d="M0 0.0208558C1.89976 -0.0448533 4.89446 0.0676891 6.81627 0.0457861L7 0.0457861V0.228312C6.97428 2.14483 6.97428 5.10539 6.90813 7H6.72441C5.55589 4.91921 5.19211 2.56829 5.16271 0.228312L6.81627 1.87104C4.46086 1.84549 2.09084 1.3722 0 0.204036L0 0.0208558Z" fill="#55BEC6"></path>
   </svg>
 );
@@ -227,24 +228,31 @@ function App() {
         </section>
 
         <section id="about">
-          <div className="section-pattern isotype-pattern">
-            <PipelineGraphicSVG />
-          </div>
-          
           <div className="container">
-            <div className="about-layout-v2">
-              <div className="about-content-left">
+            <div className="about-layout-v3">
+              <div className="about-left-col">
                 <div className="eyebrow-container">
                   <CornerSymbolSVG />
                   <span className="eyebrow-text">WHO WE ARE</span>
                 </div>
-                <h2>Building the Future of Drug Development</h2>
-                <p className="lead-text">Too many promising drug programs stall or fail for reasons that have little to do with biology and everything to do with fragmented development, misaligned capital and reactive decision-making.</p>
-                <p>Our mission is to build a capital-efficient drug development platform that systematically advances high-potential assets with institutional-grade execution. We design programs to withstand regulatory, operational and capital constraints from day one, so strong science is translated into credible, pharma-ready programs.</p>
+                <h2>LevelSet Bio was founded to address one of the biggest failure points in biotech... execution</h2>
+                <div className="isotype-block-about">
+                  <PipelineGraphicSVG />
+                </div>
               </div>
 
-              <div className="about-image-right">
-                 <img src={cellsPillar} alt="Cells Pillar" />
+              <div className="about-center-col">
+                 <div className="pillar-image-wrap">
+                    <img src={cellsPillar} alt="Cells Pillar" />
+                 </div>
+              </div>
+
+              <div className="about-right-col">
+                <div className="grey-text-box">
+                  <div className="full-divider"></div>
+                  <p>Too many promising drug programs stall or fail for reasons that have little to do with biology and everything to do with fragmented development, misaligned capital and reactive decision-making.</p>
+                  <p>Our mission is to build a capital-efficient drug development platform that systematically advances high-potential assets with institutional-grade execution. We design programs to withstand regulatory, operational and capital constraints from day one, so strong science is translated into credible, pharma-ready programs.</p>
+                </div>
               </div>
             </div>
           </div>
@@ -252,13 +260,6 @@ function App() {
 
         {/* Vision Section */}
         <section id="vision" className="dark-section">
-          <div className="dark-pattern-overlay">
-            <div className="corner-grid-pattern white-corners">
-              {Array.from({ length: 12 }).map((_, i) => (
-                <div key={i} className="bg-corner-item"><CornerSymbolSVG /></div>
-              ))}
-            </div>
-          </div>
           <div className="container">
             <div className="vision-content">
                <div className="eyebrow-container cyan-text">
@@ -279,20 +280,15 @@ function App() {
 
         {/* Approach Section */}
         <section id="model" className="approach-section">
-          <div className="section-pattern isotype-pattern approach-pattern">
-            <PipelineGraphicSVG />
-          </div>
-          <div className="corner-grid-pattern">
-            {Array.from({ length: 8 }).map((_, i) => (
-              <div key={i} className="bg-corner-item"><CornerSymbolSVG /></div>
-            ))}
-          </div>
           <div className="container">
             <div className="approach-layout">
               <div className="approach-left">
                 <h2>What our Approach Enables</h2>
                 <p>Builds a scalable clinical-stage portfolio combining AI insights, disciplined execution and capital efficiency to consistently develop pharma-ready assets.</p>
                 <a href="#footer" className="btn-modern">Contact us to Learn More<ArrowSVG /></a>
+                <div className="watermark-block-approach">
+                  <img src={watermarkSvg} alt="Watermark" />
+                </div>
               </div>
               <div className="approach-right">
                 <div className="benefits-grid">
@@ -400,11 +396,6 @@ function App() {
 
         {/* Partners Section */}
         <section id="partners">
-          <div className="corner-grid-pattern">
-             {Array.from({ length: 12 }).map((_, i) => (
-                <div key={i} className="bg-corner-item"><CornerSymbolSVG /></div>
-              ))}
-          </div>
           <div className="container partners-layout-v2">
             <div className="partners-sidebar">
                <div className="eyebrow-container">
@@ -445,11 +436,6 @@ function App() {
 
         {/* Pipeline Section */}
         <section id="pipeline">
-          <div className="corner-grid-pattern">
-             {Array.from({ length: 12 }).map((_, i) => (
-                <div key={i} className="bg-corner-item"><CornerSymbolSVG /></div>
-              ))}
-          </div>
           <div className="container">
             <div className="eyebrow-container">
                <CornerSymbolSVG />
@@ -502,13 +488,6 @@ function App() {
 
         {/* News Section */}
         <section id="news" className="dark-section">
-           <div className="dark-pattern-overlay">
-            <div className="corner-grid-pattern white-corners">
-              {Array.from({ length: 12 }).map((_, i) => (
-                <div key={i} className="bg-corner-item"><CornerSymbolSVG /></div>
-              ))}
-            </div>
-          </div>
           <div className="container">
              <div className="eyebrow-container">
                <CornerSymbolSVG />
@@ -536,13 +515,6 @@ function App() {
 
         {/* Footer Section */}
         <footer id="footer" className="dark-footer">
-          <div className="footer-pattern-bg">
-            <div className="corner-grid-pattern white-corners">
-              {Array.from({ length: 12 }).map((_, i) => (
-                <div key={i} className="bg-corner-item"><CornerSymbolSVG /></div>
-              ))}
-            </div>
-          </div>
           <div className="container">
             <div className="footer-innovation-grid">
               <div className="partnering-cta">
@@ -577,16 +549,6 @@ function App() {
                     <input type="email" placeholder="john@organization.com" />
                   </div>
                   <div className="form-group">
-                    <label>Asset Stage / Therapeutic Area</label>
-                    <select>
-                      <option>Select Asset Stage</option>
-                      <option>Early Preclinical</option>
-                      <option>IND-Enabling</option>
-                      <option>Clinical Phase I</option>
-                      <option>Other</option>
-                    </select>
-                  </div>
-                  <div className="form-group">
                     <label>Brief Asset Description</label>
                     <textarea placeholder="Describe the mechanism of action and translational rationale..."></textarea>
                   </div>
@@ -598,7 +560,7 @@ function App() {
             </div>
             <div className="footer-bottom">
               <div className="footer-brand">
-                <div className="footer-isotype-bg">
+                <div className="footer-isotype-grayscale">
                    <PipelineGraphicSVG />
                 </div>
                 <LogoSVG color="white" />
