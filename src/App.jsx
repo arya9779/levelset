@@ -531,9 +531,6 @@ function App() {
 
         {/* Footer Section */}
         <footer id="footer" className="dark-footer">
-          <div className="footer-pattern-bg">
-             <img src={logoWhite} alt="" className="footer-watermark" />
-          </div>
           <div className="container">
             <div className="footer-innovation-grid">
               <div className="partnering-cta">
