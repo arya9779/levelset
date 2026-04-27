@@ -282,6 +282,11 @@ function App() {
           <div className="section-pattern isotype-pattern approach-pattern">
             <PipelineGraphicSVG />
           </div>
+          <div className="corner-grid-pattern">
+            {Array.from({ length: 8 }).map((_, i) => (
+              <div key={i} className="bg-corner-item"><CornerSymbolSVG /></div>
+            ))}
+          </div>
           <div className="container">
             <div className="approach-layout">
               <div className="approach-left">

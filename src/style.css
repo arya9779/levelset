@@ -434,6 +434,7 @@ p {
 /* Sections */
 section {
   padding: 120px 0;
+  position: relative;
 }
 
 .dark-section {
