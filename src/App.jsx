@@ -226,8 +226,8 @@ function App() {
           </div>
         </section>
 
-        <section id="about" className="hover-trigger">
-          <div className="section-pattern isotype-pattern hover-svg-wrapper">
+        <section id="about">
+          <div className="section-pattern isotype-pattern">
             <PipelineGraphicSVG />
           </div>
           
@@ -278,8 +278,8 @@ function App() {
         </section>
 
         {/* Approach Section */}
-        <section id="model" className="approach-section hover-trigger">
-          <div className="section-pattern isotype-pattern approach-pattern hover-svg-wrapper">
+        <section id="model" className="approach-section">
+          <div className="section-pattern isotype-pattern approach-pattern">
             <PipelineGraphicSVG />
           </div>
           <div className="container">
@@ -287,7 +287,7 @@ function App() {
               <div className="approach-left">
                 <h2>What our Approach Enables</h2>
                 <p>Builds a scalable clinical-stage portfolio combining AI insights, disciplined execution and capital efficiency to consistently develop pharma-ready assets.</p>
-                <a href="mailto:info@levelsetbio.com" className="btn-modern">Contact us to Learn More <ArrowSVG /></a>
+                <a href="#footer" className="btn-modern">Contact us to Learn More<ArrowSVG /></a>
               </div>
               <div className="approach-right">
                 <div className="benefits-grid">
@@ -298,16 +298,15 @@ function App() {
                     { title: 'Unified Execution', desc: 'Integrated CMC, regulatory and clinical execution' },
                     { title: 'Risk Discipline', desc: 'Structural risk management and early kill criteria' },
                     { title: 'Clean Data Packages', desc: 'Clean, diligence-ready data packages for partnering' }
-                  ].map(benefit => (
-                    <div className="benefit-card-v2 hover-trigger" key={benefit.title}>
-                      <div className="hover-svg-wrapper"><PipelineGraphicSVG /></div>
+                  ].map(item => (
+                    <div className="benefit-card-v2" key={item.title}>
                       <div className="card-top">
-                        <BenefitIcon title={benefit.title} />
+                        <BenefitIcon title={item.title} />
                         <div className="card-divider"></div>
-                        <h3>{benefit.title}</h3>
+                        <h3>{item.title}</h3>
                       </div>
                       <div className="card-bottom">
-                        <p>{benefit.desc}</p>
+                        <p>{item.desc}</p>
                       </div>
                     </div>
                   ))}
@@ -531,8 +530,10 @@ function App() {
         </section>
 
         {/* Footer Section */}
-        <footer className="dark-footer hover-trigger">
-          <div className="hover-svg-wrapper"><PipelineGraphicSVG /></div>
+        <footer id="footer" className="dark-footer">
+          <div className="footer-pattern-bg">
+             <img src={logoWhite} alt="" className="footer-watermark" />
+          </div>
           <div className="container">
             <div className="footer-innovation-grid">
               <div className="partnering-cta">
@@ -565,6 +566,16 @@ function App() {
                   <div className="form-group">
                     <label>Email Address</label>
                     <input type="email" placeholder="john@organization.com" />
+                  </div>
+                  <div className="form-group">
+                    <label>Asset Stage / Therapeutic Area</label>
+                    <select>
+                      <option>Select Asset Stage</option>
+                      <option>Early Preclinical</option>
+                      <option>IND-Enabling</option>
+                      <option>Clinical Phase I</option>
+                      <option>Other</option>
+                    </select>
                   </div>
                   <div className="form-group">
                     <label>Brief Asset Description</label>
